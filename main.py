@@ -290,11 +290,12 @@ def main():
     for i in range(52):
         print sorted(saved[i].items(), key=lambda x: x[1], reverse=True)
     
-    rres = res[0:41] + ' ' + res[41:]    
+    rres = res[0:42] + ' ' + res[42:]    
     
     print 'the result is (correct? %s):' % stat[4]
     print rres
     print 'copied tot clipboard'
+    import pyperclip    
     pyperclip.copy(rres)
 
 
